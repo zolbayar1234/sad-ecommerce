@@ -1,0 +1,6 @@
+#Pattern decision
+Order Creation | Factory method | Standart & Vip захиалгын дүрэм өөр тул үүсгэх factory дэд классуудыг салгаснаар шинэ юм нэмэхэд OrderService-г засах хэрэггүй.
+| Order Construction | Builder | Order олон параметртэй тул байгуулагчын дараалал андуурч болно мөн build() дотор customerId, items, total-ийн шалгалтыг нэг дор хийж чадна. | Prototype-ийг сонгоогүй, учир нь захиалга бүр шинэ санхүүгийн гүйлгээ тул хуучныг clone хийхгүй, шинээр эхлүүлэх ёстой. |
+| Notifications | Abstract Factory | Email & SMS Channel,Formatter хоёрыг хамт шаарддаг тул таарсан хосыг нэг factory-с авах нь андуурахаас сэргийлнэ. | Factory Method-г сонгоогүй, учир нь нэг factory нэг бүтээгдэхүүн үүсгэдэг бол энд хоёр хамтран ажилладаг бүтээгдэхүүн хэрэгтэй. |
+| System Clock | Singleton | Системийн цагийн нэг л эх үүсвэр хэрэгтэй тул enum singleton нь thread-safe бөгөөд хаа сайгүй нэг instance байлгана. | Static utility class-ийг сонгоогүй, учир нь static класс interface хэрэгжүүлж чаддаггүй, тестэд цагийг орлуулах боломжгүй. |
+| Cart Templates | Prototype | Давтагдах сагсны загварыг дахин сугалахгүйгээр санах ойд хуулбарлан шууд ашиглаж болно. | Builder-ийг сонгоогүй, учир нь зорилго нь байгаа сагсыг хуулбарлах бөгөөд эхнээс нь алхам алхмаар барих биш. |
